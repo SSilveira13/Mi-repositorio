@@ -9,7 +9,7 @@ int main()
 
     printf("Nombre: ");
     fflush(stdin);
-    scanf("%s",nombre);
+    scanf("%[^\n]",nombre);
     strlwr(nombre);
     nombre[0]=toupper(nombre[0]);
 
