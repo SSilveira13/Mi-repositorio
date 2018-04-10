@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1523397006 source:d:\santiago\getin\getin.c
+
+1523400972 source:d:\santiago\getin\main.c
+	<stdio.h>
+	<stdlib.h>
+	"GetIn.h"
+
+1523397006 d:\santiago\getin\getin.h
+
