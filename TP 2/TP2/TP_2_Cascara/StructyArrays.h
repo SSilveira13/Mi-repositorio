@@ -8,16 +8,15 @@ typedef struct {
     int estado;
     int dni;
 
-
 }EPersona;
 
-int agregarPersona(int i);
+int agregarPersona(int i,EPersona lista[]);
 
-void ordenaryMostrar();
+int ordenaryMostrar(EPersona lista[]);
 
-void borrarPersona();
+int borrarPersona(EPersona lista[]);
 
-void graficarEdad();
+int graficarEdad(int i,EPersona lista[]);
 
 /**
  * Obtiene el primer indice libre del array.
