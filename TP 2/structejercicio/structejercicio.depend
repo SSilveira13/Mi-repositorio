@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1524012412 source:d:\santiago\structejercicio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1524429658 source:c:\users\santiago\desktop\tp 2\structejercicio\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
