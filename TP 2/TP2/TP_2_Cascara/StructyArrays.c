@@ -67,7 +67,7 @@ int ordenaryMostrar(EPersona lista[])//ORDENAR Y MOSTRAR
     }
 }
 
-int borrarPersona(EPersona lista[])
+int borrarPersona(EPersona lista[])//BORRAR PERSONA
 {
     int i;
     printf("\n");
@@ -80,5 +80,56 @@ int borrarPersona(EPersona lista[])
     }
     printf("Elija el espacio a borrar: ");
     scanf("%d",&i);
+    lista[i].estado = 0;
+    return 0;
+}
+
+int graficarEdad(int i,EPersona lista[])
+{
+    int i,chico,mediano,grande;
+    chico=0;
+    mediano=0;
+    grande=0;
+    //---------------CONSIGO LA CANTIDAD DE PERSONAS PARA CADA EDAD
+    for(i=0;i<20;i++)
+    {
+        if(lista[i].estado == 1)
+        {
+            if(lista[i].edad < 18)//JOVEN
+            {
+                chico++;
+            }
+            if(lista[i].edad <= 35 && lista[i].edad >= 19)//JOVEN ADULTO
+            {
+                mediano++;
+            }
+            if(lista[i].edad > 35)//ADULTO
+            {
+                grande++;
+            }
+        }
+    }
+    //---------------GRAFICO DE EDADES
+    int max=0;
+    int espacioBlancoChico=0;
+    int espacioBlancoMediano=0;
+    int espacioBlancoGrande=0;
+    if(chico>max)
+    {
+        max = chico;
+    }
+    if(mediano>max)
+    {
+        max = mediano;
+    }
+    if(grande>max)
+    {
+        max = grande;
+    }
+    espacioBlancoChico = max - chico;
+    espacioBlancoMediano = max - mediano;
+    espacioBlancoGrande = max - grande;
+
 
 }
+
