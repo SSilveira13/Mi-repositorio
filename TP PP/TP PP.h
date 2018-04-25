@@ -8,12 +8,16 @@ typedef struct
     float importe;
     int cantidad;
     int estado;
-}EProducto;
+}eProducto;
 
-void inicializar(EProducto lista[], int);
+void inicializar(eProducto lista[], int);
 
-void agregarProducto(EProducto lista[], int);
+void agregarProducto(eProducto lista[], int);
 
-void modificarProducto(EProducto lista[]);
+void modificarProducto(eProducto lista[]);
+
+void borrarProducto(eProducto lista[]);
+
+void listarProductos(eProducto lista[]);
 
 #endif // FUNCIONES_H_INCLUDED

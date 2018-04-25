@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1524611231 source:d:\santiago\mi-repositorio-master\tp pp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"TP PP.h"
+
+1524615845 d:\santiago\mi-repositorio-master\tp pp\tp pp.h
+
+1524615845 source:d:\santiago\mi-repositorio-master\tp pp\tp pp.c
+	<stdio.h>
+	<stdlib.h>
+	"TP PP.h"
+

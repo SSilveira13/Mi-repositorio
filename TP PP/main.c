@@ -7,9 +7,9 @@ int main()
     char seguir = 's';
     int opcion;
 
-    EProducto lista[20],aux;
+    eProducto lista[20],aux;
 
-    inicializar(lista[],20);
+    inicializar(lista,20);
 
     while(seguir=='s')
     {
@@ -23,16 +23,18 @@ int main()
 
         switch(opcion)
         {
-            case 1:
-                agregarProducto(lista[],20);
+            case 1://AGREGAR
+                agregarProducto(lista,20);
                 break;
-            case 2:
+            case 2://MODIFICAR
+                modificarProducto(lista);
                 break;
-            case 3:
+            case 3://BORRAR
+                borrarProducto(lista);
                 break;
-            case 4:
+            case 4://LISTAR
                 break;
-            case 5:
+            case 5://SALIR
                 seguir = 'n';
                 break;
         }
