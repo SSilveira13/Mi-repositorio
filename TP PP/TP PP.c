@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "TP PP.h"
 
 void inicializar(eProducto lista[], int cantidad)
@@ -157,8 +158,84 @@ void borrarProducto(eProducto lista[])
     }
 }
 
-void listarProductos(eProducto lista[])
+void listarProductos(eProducto lista[], eProducto aux)
 {
+    int i,j,opcion;
+    char seguir = 's';
+    while(seguir=='s')
+        {
+            printf("1- Ordenar por importe\n");
+            printf("2- Ordenar por descripcion\n");
+            printf("5- No ordenar.\n");
 
+            scanf("%d",&opcion);
+
+            switch(opcion)
+            {
+                case 1:
+                    for(i=0;i<20;i++)
+                    {
+                        if(lista[i].estado == 1)
+                        {
+                            for(j=i+1;j<20;j++)
+                                {
+                                if(lista[j].estado == 1)
+                                {
+                                    if(lista[i].importe<lista[j].importe)
+                                    {
+                                        aux=lista[i];
+                                        lista[i]=lista[j];
+                                        lista[j]=aux;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    mostrarLista(lista);
+                    break;
+                case 2:
+                    {
+                        if(lista[i].estado == 1)
+                        {
+                            for(j=i+1;j<20;j++)
+                                {
+                                if(lista[j].estado == 1)
+                                {
+                                    if(strcmp(lista[j].descripcion,lista[i].descripcion)<0)
+                                    {
+                                        aux=lista[i];
+                                        lista[i]=lista[j];
+                                        lista[j]=aux;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    mostrarLista(lista);
+                    break;
+                case 5://TERMINAR
+                    seguir = 'n';
+                    break;
+            }
+        }
 }
+
+void mostrarLista(eProducto lista[])
+{
+    int i;
+    printf("\nLos productos son: ");
+    for(i=0;i<20;i++)
+    {
+        if(lista[i].estado == 1)
+        {
+            printf("\nCodigo: %d\t Descripcion: %s\t Cantidad: %d\t Importe: %2.f\n",lista[i].codigo,lista[i].descripcion,lista[i].cantidad,lista[i].importe);
+        }
+    }
+}
+
+
+//ITEM EXTRA: LISTAR PROVEEDORES CON SUS PRODUCTOS
+//LISTAR LOS PRODUCTOS Y SUS PROVEEDORES
+
+
 

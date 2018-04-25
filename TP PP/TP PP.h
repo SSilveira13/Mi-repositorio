@@ -18,6 +18,8 @@ void modificarProducto(eProducto lista[]);
 
 void borrarProducto(eProducto lista[]);
 
-void listarProductos(eProducto lista[]);
+void listarProductos(eProducto lista[],eProducto aux);
+
+void mostrarLista(eProducto lista[]);
 
 #endif // FUNCIONES_H_INCLUDED
