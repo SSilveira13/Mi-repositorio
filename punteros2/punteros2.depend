@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1526425889 source:d:\santiago\punteros2\punteros.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1526431988 source:d:\santiago\punteros2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"punteros.h"
+
+1526431894 d:\santiago\punteros2\punteros.h
+
