@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1527640193 source:d:\santiago\listadinamica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"preguntas.h"
+
+1527641365 d:\santiago\listadinamica\preguntas.h
+
+1527640362 source:d:\santiago\listadinamica\preguntas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
