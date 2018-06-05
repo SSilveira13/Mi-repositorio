@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1528161412 source:d:\santiago\biblioteca_lista_dinamica\main.c
+1528235720 source:d:\santiago\biblioteca_lista_dinamica\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"persona.h"
 
-1528161367 d:\santiago\biblioteca_lista_dinamica\persona.h
+1528235720 d:\santiago\biblioteca_lista_dinamica\persona.h
 
-1528161412 source:d:\santiago\biblioteca_lista_dinamica\persona.c
+1528236374 source:d:\santiago\biblioteca_lista_dinamica\persona.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

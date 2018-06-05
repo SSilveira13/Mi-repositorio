@@ -23,6 +23,7 @@ int persona_getEdad(Persona* pPersona);
 
 char* persona_getNombre(Persona* pPersona);
 
+void persona_getList(int cont);
 
 char* preguntarNombre(char aux[20]);
 int preguntarEdad();

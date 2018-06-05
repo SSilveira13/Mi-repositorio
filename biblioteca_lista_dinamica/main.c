@@ -5,11 +5,9 @@
 
 int main()
 {
-
     persona_initLista();
 
     do{
-
         Persona* persona = persona_newPersona();
 
         char nombreAux[20];
@@ -23,6 +21,9 @@ int main()
 
         persona_addPersona(persona);
 
+        persona_toString(persona);
+
     }while(preguntarSalir()!='S');
+
     return 0;
 }

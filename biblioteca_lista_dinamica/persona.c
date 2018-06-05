@@ -67,12 +67,20 @@ char* persona_getNombre(Persona* pPersona)
     return pPersona->nombre;
 }
 
-
-
+void persona_getList(int cont)
+{
+    int i;
+    for(i=0;i<cont;i++)
+    {
+        printf("1");
+        persona_toString(lista[i]);
+    }
+}
 
 char* preguntarNombre(char aux[20])
 {
     printf("\nIngrese el nombre: ");
+    fflush(stdin);
     scanf("%s",aux);
     return aux;
 }
@@ -81,6 +89,7 @@ int preguntarEdad()
 {
     int aux;
     printf("\nIngrese la edad: ");
+    fflush(stdin);
     scanf("%d",&aux);
     return aux;
 }
@@ -89,6 +98,7 @@ char preguntarSalir()
 {
     char aux;
     printf("\nQuiere dejar de ingresar personas?<S/N>: ");
+    fflush(stdin);
     scanf("%c",&aux);
     return aux;
 }
