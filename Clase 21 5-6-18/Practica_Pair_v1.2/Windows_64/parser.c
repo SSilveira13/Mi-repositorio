@@ -6,7 +6,7 @@
 
 int parserEmployee(FILE* pFile , ArrayList* pArrayListEmployee)
 {
-    Employee employee;
+    Employee *employee;
     pFile = fopen("data.csv","r");
     if(pFile == NULL)
     {
@@ -21,7 +21,7 @@ int parserEmployee(FILE* pFile , ArrayList* pArrayListEmployee)
     while(!feof(pFile))
     {
         printf("1");
-        cant = fread(&employee,sizeof(Employee)*8,1,pFile);
+        cant = fread(employee,sizeof(Employee),1,pFile);
         if(cant!=1)
         {
             if(feof(pFile))
@@ -32,7 +32,7 @@ int parserEmployee(FILE* pFile , ArrayList* pArrayListEmployee)
                 break;
             }
         }
-        printf("%s",employee.name);
+        printf("%s",employee->name);
     }
     return 0;
 }
