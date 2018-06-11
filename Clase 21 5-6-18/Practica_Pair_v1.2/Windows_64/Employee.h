@@ -33,7 +33,11 @@ void employee_print(Employee* this);
 Employee* employee_new(void);
 void employee_delete(Employee* this);
 int employee_setId(Employee* this, int id);
-int employee_getId(Employee* this);
+int employee_setName(Employee* this, char name[51]);
+int employee_setLname(Employee* this, char lastName[51]);
+int employee_getId(Employee* this, int index);
+int employee_getName(Employee* this, int index, char* aux[51]);
+int employee_getLname(Employee* this, int index, char* aux[51]);
 #endif // _EMPLOYEE_H
 
 

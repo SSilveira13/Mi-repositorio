@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "ArrayList.h"
 #include "Employee.h"
 
@@ -26,10 +27,44 @@ Employee* employee_new(void)
     return returnAux;
 }
 
-void employee_delete(Employee* this)
+void employee_delete(Employee* this, int index)
 {
+    this[index]->isEmpty = 0;
+}
 
+int employee_getId(Employee* this, int index)
+{
+    int id;
+    id = this[index]->id;
+    return id;
+}
 
+int employee_getName(Employee* this, int index, char* aux[51])
+{
+    strcpy(aux, this[index]->name);
+    return 0;
+}
+
+int employee_getLname(Employee* this, int index, char* aux[51])
+{
+    strcpy(aux, this[index]->lastName);
+    return 0;
+}
+
+int employee_setName(Employee* this, char name[51])
+{
+    printf("Ingrese el nombre: ");
+    scanf("%s",name);
+    strcpy(this->name,name);
+    return 0;
+}
+
+int employee_setLname(Employee* this, char lastName[51])
+{
+    printf("Ingrese el apellido: ");
+    scanf("%s",lastName);
+    strcpy(this->lastName,lastName);
+    return 0;
 }
 
 int employee_setId(Employee* this, int id)
@@ -37,12 +72,3 @@ int employee_setId(Employee* this, int id)
     this->id=id+1;
     return 0;
 }
-
-int employee_getId(Employee* this)
-{
-
-    return 0;
-
-}
-
-

@@ -27,7 +27,7 @@ int main()
     FILE* pFile;
 
     int id = 0;
-
+    char name[51],lastName[51];
     while(seguir=='s')
     {
         system("cls");
@@ -55,6 +55,8 @@ int main()
             case 4://Agregar un elemento
                 employee = employee_new();
                 employee_setId(employee,id);
+                employee_setName(employee,name);
+                employee_setLname(employee,lastName);
                 lista->add(lista,employee);
                 id++;
                 break;
