@@ -26,7 +26,7 @@ int main()
 
     FILE* pFile;
 
-    int id = 0;
+    int id = 0,cant;
     char name[51],lastName[51];
     while(seguir=='s')
     {
@@ -47,7 +47,8 @@ int main()
                 parserEmployee(pFile,lista);
                 break;
             case 2://Listar Empleados
-
+                cant = ArrayList->len(lista);
+                if (cant != -1)
                 break;
             case 3://Ordenar por nombre
 
