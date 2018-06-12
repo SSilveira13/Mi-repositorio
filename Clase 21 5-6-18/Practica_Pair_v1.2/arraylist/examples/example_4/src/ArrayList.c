@@ -230,6 +230,7 @@ int al_clear(ArrayList* this)
     int returnAux = -1;
     if(this != NULL)
     {
+        free(this->pElements);
         this->size = 0;
         returnAux = 0;
     }
@@ -249,6 +250,7 @@ ArrayList* al_clone(ArrayList* this)
     ArrayList* returnAux = NULL;
     if(this!=NULL)
     {
+        returnAux = this;
         for(i=0;i<this->size;i++)
         {
             returnAux->pElements[i] = this->pElements[i];
@@ -270,7 +272,18 @@ ArrayList* al_clone(ArrayList* this)
 int al_push(ArrayList* this, int index, void* pElement)
 {
     int returnAux = -1;
-
+    if(this!=NULL && pElement!=NULL && index>0 && index<this->size)
+    {
+        int i,j;
+        returnAux = 0;
+        this->size++;
+        for(i=this->size-1;i>=index;i--)
+        {
+            j=i+1;
+            this->pElements[j]=this->pElements[i];
+        }
+        this->pElements[index]=pElement;
+    }
     return returnAux;
 }
 

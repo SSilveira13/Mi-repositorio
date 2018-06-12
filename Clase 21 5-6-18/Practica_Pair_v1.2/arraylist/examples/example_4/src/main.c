@@ -36,9 +36,9 @@ int main(void)
         //startTesting(6);//Funciona contains
         //startTesting(7);//Funciona set
         //startTesting(8);//Funciona Remove
-        //startTesting(9);//Funciona clear
-        startTesting(10);// clone
-        //startTesting(11);// push
+        //startTesting(9);//Funciona clear revisar
+        //startTesting(10);//Funciona clone preguntar
+        startTesting(11);// push
         //startTesting(12);// indexOf
         //startTesting(13);//Funciona isEmpty
         //startTesting(14);//No funciona revisar pop 80%
