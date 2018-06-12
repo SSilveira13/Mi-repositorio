@@ -104,7 +104,19 @@ int al_add(ArrayList* this, void** pElement)
 int al_deleteArrayList(ArrayList* this)
 {
     int returnAux = -1;
-
+    if(this!=NULL)
+    {
+        //this->clear(this);
+        free(this);
+        if(this->size>0)
+        {
+            returnAux = 0;
+        }
+        else
+        {
+            returnAux = 1;
+        }
+    }
     return returnAux;
 }
 
@@ -197,7 +209,12 @@ int al_set(ArrayList* this, int index,void* pElement)
 int al_remove(ArrayList* this,int index)
 {
     int returnAux = -1;
-
+    if(this!=NULL && index>=0 && index<this->len(this))
+    {
+        this->pElements[index] = NULL;
+        this->size--;
+        returnAux = 0;
+    }
     return returnAux;
 }
 
@@ -228,8 +245,15 @@ int al_clear(ArrayList* this)
  */
 ArrayList* al_clone(ArrayList* this)
 {
+    int i;
     ArrayList* returnAux = NULL;
-
+    if(this!=NULL)
+    {
+        for(i=0;i<this->size;i++)
+        {
+            returnAux->pElements[i] = this->pElements[i];
+        }
+    }
     return returnAux;
 }
 
@@ -295,7 +319,12 @@ int al_isEmpty(ArrayList* this)
 void* al_pop(ArrayList* this,int index)
 {
     void* returnAux = NULL;
-
+    if(this!=NULL && index>=0 && index<this->size)
+    {
+        returnAux = this->pElements[index];
+        this->pElements[index] = NULL;
+        this->size--;
+    }
     return returnAux;
 }
 
@@ -327,21 +356,24 @@ ArrayList* al_subList(ArrayList* this,int from,int to)
  */
 int al_containsAll(ArrayList* this,ArrayList* this2)
 {
-    int i,cont = 0,returnAux = -1;
+    int i,j,cont = 0,returnAux = -1;
     if(this!=NULL && this2!=NULL)
     {
         for(i=0;i<this->size;i++)
         {
-            if(this->pElements[i] == this2->pElements[i])
+            for(j=0;j<this2->size;j++)
             {
-                cont++;
+                if(this->pElements[i] == this2->pElements[j])
+                {
+                    cont++;
+                }
             }
         }
-        if(this->size == cont)
+        if(this->size == cont || this2->size == cont)
         {
             returnAux = 1;
         }
-        else if(cont > 0)
+        else if(cont > 0 && this->size > cont && this2->size > cont)
         {
             returnAux = 0;
         }

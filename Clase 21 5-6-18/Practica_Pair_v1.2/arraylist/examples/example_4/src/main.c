@@ -28,23 +28,23 @@
 
 int main(void)
 {
-        //startTesting(1);//Funciona
-        //startTesting(2);//Funciona
-        //startTesting(3);
-        //startTesting(4);//Funciona
-        //startTesting(5);//Funciona
-        //startTesting(6);//Funciona
-        //startTesting(7);//Funciona
-        //startTesting(8);
-        //startTesting(9);//Funciona
-        /*startTesting(10);
-        startTesting(11);
-        startTesting(12);*/
-        //startTesting(13);//Funciona
-        //startTesting(14);
-        //startTesting(15);
-        startTesting(16);
-        //startTesting(17);
+        //startTesting(1);//Funciona newArrayList
+        //startTesting(2);//Funciona add
+        //startTesting(3);//Funciona deleteArrayList preguntar
+        //startTesting(4);//Funciona len
+        //startTesting(5);//Funciona get
+        //startTesting(6);//Funciona contains
+        //startTesting(7);//Funciona set
+        //startTesting(8);//Funciona Remove
+        //startTesting(9);//Funciona clear
+        startTesting(10);// clone
+        //startTesting(11);// push
+        //startTesting(12);// indexOf
+        //startTesting(13);//Funciona isEmpty
+        //startTesting(14);//No funciona revisar pop 80%
+        //startTesting(15);// subList
+        //startTesting(16);//Funciona containsAll
+        //startTesting(17);// sort
 
     return 0;
 }
