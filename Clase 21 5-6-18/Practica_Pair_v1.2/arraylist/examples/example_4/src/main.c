@@ -37,7 +37,7 @@ int main(void)
         //startTesting(7);//Funciona set
         //startTesting(8);//Funciona Remove
         //startTesting(9);//Funciona clear
-        startTesting(10);//Funciona clone preguntar------------------
+        startTesting(10);//Funciona clone
         //startTesting(11);//No funciona push-------------------
         //startTesting(12);//Funciona indexOf
         //startTesting(13);//Funciona isEmpty

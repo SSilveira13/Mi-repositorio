@@ -106,7 +106,6 @@ int al_deleteArrayList(ArrayList* this)//revisar
     int returnAux = -1;
     if(this!=NULL)
     {
-        //this->clear(this);
         free(this);
         if(this->size>0)
         {
@@ -253,7 +252,8 @@ ArrayList* al_clone(ArrayList* this)//revisar
         returnAux = this;
         for(i=0;i<this->size;i++)
         {
-            returnAux->pElements[i] = this->pElements[i];
+            //returnAux->pElements[i] = this->pElements[i];
+            this->add(returnAux,this->pElements[i]);
         }
     }
     return returnAux;
@@ -272,17 +272,17 @@ ArrayList* al_clone(ArrayList* this)//revisar
 int al_push(ArrayList* this, int index, void* pElement)
 {
     int returnAux = -1;
-    if(this!=NULL && pElement!=NULL && index>0 && index<this->size)
+    if(this!=NULL && pElement!=NULL && index>=0 && index<this->size)
     {
         int i,j;
-        returnAux = 0;
         this->size++;
-        for(i=this->size-1;i>=index;i--)
+        for(i=this->size-2;i>=index;i--)
         {
             j=i+1;
             this->pElements[j]=this->pElements[i];
         }
         this->pElements[index]=pElement;
+        returnAux = 0;
     }
     return returnAux;
 }
