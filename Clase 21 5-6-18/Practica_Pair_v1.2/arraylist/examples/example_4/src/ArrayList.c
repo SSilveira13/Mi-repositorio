@@ -101,7 +101,7 @@ int al_add(ArrayList* this, void** pElement)
  * \return int Return (-1) if Error [pList is NULL pointer] - (0) if Ok
  *
  */
-int al_deleteArrayList(ArrayList* this)
+int al_deleteArrayList(ArrayList* this)//revisar
 {
     int returnAux = -1;
     if(this!=NULL)
@@ -230,8 +230,8 @@ int al_clear(ArrayList* this)
     int returnAux = -1;
     if(this != NULL)
     {
-        free(this->pElements);
         this->size = 0;
+        free(this->pElements);
         returnAux = 0;
     }
     return returnAux;
@@ -244,7 +244,7 @@ int al_clear(ArrayList* this)
  * \return ArrayList* Return  (NULL) if Error [pList is NULL pointer]
  *                          - (New array) if Ok
  */
-ArrayList* al_clone(ArrayList* this)
+ArrayList* al_clone(ArrayList* this)//revisar
 {
     int i;
     ArrayList* returnAux = NULL;
@@ -296,8 +296,18 @@ int al_push(ArrayList* this, int index, void* pElement)
  */
 int al_indexOf(ArrayList* this, void* pElement)
 {
-    int returnAux = -1;
-
+    int i,returnAux = -1;
+    if(this!=NULL && pElement!=NULL)
+    {
+        for(i=0;i<this->size;i++)
+        {
+            if(this->pElements[i]==pElement)
+            {
+                returnAux = i;
+                break;
+            }
+        }
+    }
     return returnAux;
 }
 
