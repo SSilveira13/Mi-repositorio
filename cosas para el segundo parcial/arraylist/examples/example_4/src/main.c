@@ -30,21 +30,21 @@ int main(void)
 {
         startTesting(1);//Funciona newArrayList
         startTesting(2);//Funciona add
-        //startTesting(3);//Funciona deleteArrayList preguntar------------------
+        startTesting(3);//Funciona deleteArrayList preguntar------------------
         startTesting(4);//Funciona len
         startTesting(5);//Funciona get
         startTesting(6);//Funciona contains
         startTesting(7);//Funciona set
         startTesting(8);//Funciona Remove
         startTesting(9);//Funciona clear
-        //startTesting(10);//NO Funciona clone
-        //startTesting(11);//No funciona push-------------------
+        startTesting(10);//Funciona clone
+        startTesting(11);//Funciona push
         startTesting(12);//Funciona indexOf
         startTesting(13);//Funciona isEmpty
-        startTesting(14);//No funciona revisar pop 80%------------
-        //startTesting(15);// subList-----------------------
-        //startTesting(16);//Funciona containsAll
-        //startTesting(17);// sort---------------------------
+        startTesting(14);//Funciona pop
+        startTesting(15);//NO Funciona subList
+        startTesting(16);//NO Funciona containsAll
+        startTesting(17);// sort---------------------------
 
     return 0;
 }
