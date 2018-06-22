@@ -475,13 +475,10 @@ int al_containsAll(ArrayList* this,ArrayList* this2)
                 }
             }
         }
-        if(this->len(this) == cont || this2->len(this2) == cont)
+        returnAux = 0;
+        if(this2->len(this2) == cont)
         {
             returnAux = 1;
-        }
-        else if(cont > 0 && this->len(this) > cont && this2->len(this2) > cont)
-        {
-            returnAux = 0;
         }
     }
     return returnAux;

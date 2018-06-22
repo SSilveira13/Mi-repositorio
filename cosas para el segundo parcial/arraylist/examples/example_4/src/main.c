@@ -30,7 +30,7 @@ int main(void)
 {
         startTesting(1);//Funciona newArrayList
         startTesting(2);//Funciona add
-        startTesting(3);//Funciona deleteArrayList preguntar------------------
+        startTesting(3);//Funciona deleteArrayList preguntar
         startTesting(4);//Funciona len
         startTesting(5);//Funciona get
         startTesting(6);//Funciona contains
@@ -42,9 +42,9 @@ int main(void)
         startTesting(12);//Funciona indexOf
         startTesting(13);//Funciona isEmpty
         startTesting(14);//Funciona pop
-        startTesting(15);//NO Funciona subList
-        startTesting(16);//NO Funciona containsAll
-        startTesting(17);// sort---------------------------
+        startTesting(15);//Funciona subList
+        startTesting(16);//Funciona containsAll
+        startTesting(17);//Funciona sort
 
     return 0;
 }
