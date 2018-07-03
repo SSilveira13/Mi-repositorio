@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1530658732 source:d:\santiago\silveira_santiago_1f\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1530650386 d:\santiago\silveira_santiago_1f\arraylist.h
+
+1530658853 source:d:\santiago\silveira_santiago_1f\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Empleado.h"
+
+1530657667 d:\santiago\silveira_santiago_1f\empleado.h
+
+1530660792 source:d:\santiago\silveira_santiago_1f\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Empleado.h"
+	"ArrayList.h"
+	"Parser.h"
+
+1530051943 d:\santiago\silveira_santiago_1f\parser.h
+	"ArrayList.h"
+
+1530661327 source:d:\santiago\silveira_santiago_1f\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Empleado.h"
+
