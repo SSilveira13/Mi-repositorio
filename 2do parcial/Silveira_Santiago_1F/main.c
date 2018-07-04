@@ -72,6 +72,12 @@ int main()
 
 int generarArchivoSueldos(char* fileName,ArrayList* listaEmpleados)
 {
+    int longi,retorno = 0;
+    if(fopen(fileName,"w")!=NULL)
+    {
+        longi=strlen (texto );
+        fwrite ( texto , sizeof ( char ) , longi , parch );
+    }
 
-    return 1;
+    return retorno;
 }
