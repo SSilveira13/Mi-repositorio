@@ -27,7 +27,6 @@ int parser_parseEmpleados(FILE* pFile, ArrayList* listaEmpleados)
             {
                 printf("bien\n");
                 system("pause");
-
             }
             else
             {

@@ -4,13 +4,13 @@
 #include "Empleado.h"
 #include "ArrayList.h"
 
-void em_calcularSueldo(ArrayList* listaEmpleados,Empleado* empleados)
+void em_calcularSueldo(ArrayList* lista,Empleado* empleados)
 {
-    int aux,i,longitud = listaEmpleados->len(listaEmpleados);
+    int i,longitud = lista->len(lista);
 
     for(i=0;i<longitud;i++)
     {
-        empleados = listaEmpleados->get(listaEmpleados,i);
+        empleados = lista->get(lista,i);
         if(empleados->horasTrabajadas >= 176)
         {
             empleados->sueldo = empleados->horasTrabajadas * 180;
@@ -24,7 +24,6 @@ void em_calcularSueldo(ArrayList* listaEmpleados,Empleado* empleados)
             empleados->sueldo = empleados->horasTrabajadas * 360;
         }
     }
-
 }
 
 int menu()
