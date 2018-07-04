@@ -72,5 +72,6 @@ int main()
 
 int generarArchivoSueldos(char* fileName,ArrayList* listaEmpleados)
 {
+
     return 1;
 }

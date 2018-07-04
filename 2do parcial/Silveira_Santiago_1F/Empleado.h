@@ -10,7 +10,7 @@ struct S_Empleado
 };
 typedef struct S_Empleado Empleado;
 
-void em_calcularSueldo(void* p);
+void em_calcularSueldo(ArrayList* listaEmpleados,Empleado* empleados);
 
 int menu();
 
